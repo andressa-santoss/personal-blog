@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Thoughts - Edição Pessoal</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Fonte clássica de jornal -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- CABEÇALHO DO JORNAL -->
+    <header class="newspaper-header">
+        <div class="date-edition">Edição Confidencial • Hoje</div>
+        <h1>THE DAILY MIND</h1>
+        <p class="tagline">"Todas as notícias, confissões e devaneios que cabem na mente."</p>
+        <hr class="header-line">
+    </header>
+
+    <main class="container">
+        
+        <!-- PAINEL DE CRIAÇÃO (SECRETO/ADMIN) -->
+        <section class="admin-panel">
+            <button id="toggle-form-btn" class="btn-news">+ Nova Manchete (Pensamento)</button>
+            
+            <form id="post-form" class="hidden">
+                <h2>Publicar Nova Matéria</h2>
+                <input type="text" id="post-title" placeholder="Título da Manchete..." required>
+                <select id="post-category">
+                    <value value="Reflexão">REFLEXÃO</value>
+                    <option value="Desabafo">DESABAFO</option>
+                    <option value="Cotidiano">COTIDIANO</option>
+                    <option value="Teoria">TEORIA DA MENTE</option>
+                </select>
+                <textarea id="post-content" rows="6" placeholder="Escreva seus pensamentos como se estivesse redigindo uma matéria..." required></textarea>
+                <button type="submit" class="btn-publish">Enviar para a Redação</button>
+            </form>
+        </section>
+
+        <!-- FEED DE NOTÍCIAS (POSTS DO DIÁRIO) -->
+        <section class="news-feed">
+            <h2>Manchetes Recentes</h2>
+            <div id="posts-container">
+                <!-- Os posts aparecem aqui dinamicamente via JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 - Diário Pessoal Restrito. Acesso Autorizado Apenas ao Titular.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
